@@ -20,6 +20,14 @@ module Chatty
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
     config.autoload_paths << "#{Rails.root}/lib"
+    ActionMailer::Base.smtp_settings={
+        address:"smtp.gmail.com",
+        port:"587",
+        user_name:"rorander.1@gmail.com",
+        password:"loardmanoj@",
+        authentication:"plain",
+        enabled_stattls_auto:true
+    }
   end
 
 end
